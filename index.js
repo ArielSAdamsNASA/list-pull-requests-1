@@ -41,7 +41,7 @@ function setOutput(pull) {
     var output = '';
     for (var _i = 0, pull_1 = pull; _i < pull_1.length; _i++) {
         var p = pull_1[_i];
-        output = output + p.user + "\\n" p.title + "\\n" + p.html_url + "\\n---\\n";
+        output += p.user + p.url;
     }
     output = output.slice(0, -7); //最後の"\\n---\\n"を削除
     core.setOutput('pulls', output);
